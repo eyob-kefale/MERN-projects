@@ -1,0 +1,37 @@
+<%- include("header")-%> 
+<div class="box" id="heading">
+    <% if(kindOfDay==="Sunday" ||kindOfDay==="Saturday" ){%>
+        <h1 style="color: purple">
+            <%= kindOfDay %> 
+        </h1>
+        <%} else {%>
+            <h1 style="color: blue">
+                <%= kindOfDay %> 
+            </h1>
+
+            <%}%>
+        </div>
+        <div class="box">
+            
+                <%for(var i=0;i<addnewitem.length;i++){%>
+                    <div class="item">
+                        <input type="checkbox" >
+                        <p>
+                            <%=addnewitem[i]%>
+                        </p>
+                    </div>
+                    
+                    <%}%>
+
+                    <form class="item" action="/" method="post" >
+                        <div class="form-group">
+                        <input type="text" placeholder="New Item " name="newItem">
+                        <button type="submit" class="btn btn-primary" name="button">+</button>
+                        </div>
+                    </form>
+            
+        </div>
+                
+               
+        <%- include("footer")-%>      
+
